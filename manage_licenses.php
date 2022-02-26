@@ -5,8 +5,8 @@
     
     <?php
         $servername = "localhost";
-        $username = "root";
-        $password = "OHmy4d";
+        $username = "jondy";
+        $password = "Sauce!5150";
         $dbname = "licenses";
 
         class TableRows extends RecursiveIteratorIterator {
@@ -42,7 +42,7 @@
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo "Connected Successfully";
             # select row from licenses
-            $stmt = $conn->prepare("SELECT licenses.key, checkin, numusers, remainingusers FROM licenses");
+            $stmt = $conn->prepare("SELECT licensekey, checkin, numusers, remainingusers FROM licenses");
             $stmt->execute();
 
             # fetch results of query and append to php table
